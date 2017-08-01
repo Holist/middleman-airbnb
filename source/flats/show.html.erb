@@ -1,0 +1,21 @@
+<!-- Access data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+
+<div class="profile-main">
+    <div class="profile-avatar">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle profile-avatar-pic" %>
+        <div class="profile-avatar-name">
+          <p><%= flat.name %></p>
+        </div>
+    </div>
+      <div class="profile-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+  </div>
+</div>
+
+
+
+
+<h1><%= flat.description %></h1>
+<p><%= flat.city_name %></p>

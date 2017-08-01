@@ -3,9 +3,10 @@ title: Le Wagon - Middleman
 ---
 
 <%= partial "components/banner" %>
+<%= partial "components/flats" %>
 
-<div class="container">
-  <div class="row">
-    <%= partial "components/cards" %>
-  </div>
-</div>
+<% data.flats.each do |user, flat| %>
+ <%= user %>
+ <%= flat.wifi %>
+ <% end %>
+
